@@ -1,0 +1,83 @@
+network:
+  name: thewitcher
+  version: 0.1
+  hosts:
+    - yennefer
+      mode : docker
+      image : quagga_n7:latest
+      files : ./files/yennefer/etc:/
+ 
+    - geralt
+      mode : docker
+      image : quagga_n7:latest
+      files : ./files/geralt/etc:/
+ 
+    - eskel
+      mode : docker
+      image : apache_n7:latest
+      files : ./files/eskel/var:/
+ 
+    - vesemir
+      mode : docker
+      image : dns_n7:latest
+      files : ./files/vesemir/etc:/
+ 
+    - cintra
+      mode : docker
+      image : quagga_n7:latest
+      files : ./files/cintra/etc:/
+ 
+    - vengerberg
+      mode : docker
+      image : quagga_n7:latest
+      files : ./files/vengerberg/etc:/
+ 
+ 
+    - novigrad
+      mode : docker
+      image : quagga_n7:latest
+      files : ./files/novigrad/etc:/
+ 
+ 
+    - calanthe
+      mode : docker
+      image : dhcp_n7:latest
+      files : ./files/calanthe/etc:/
+ 
+    - foltest
+      mode : docker
+      image : dhcp_n7:latest
+      files : ./files/foltest/etc:/
+ 
+ 
+    - anais
+      mode : netns
+      init : ./scripts/anais
+ 
+    - adda
+      mode : docker
+      image : apache_n7:latest
+      files : ./files/adda/var:/
+ 
+    - cirilla
+      mode : netns
+      init : ./scripts/cirilla
+ 
+  links :
+    - geralt:eth1!yennefer:eth1
+    - eskel:eth0!yennefer:eth2
+    - vesemir:eth0!geralt:eth2
+    - cintra:eth1!geralt:eth0
+    - vengerberg:eth1!yennefer:eth0
+    - cirilla:eth0!calanthe:eth0
+ 
+  bridges:
+    - Switch0
+      interfaces: vengerberg:eth0!cintra:eth0!novigrad:eth1!
+    - Switch1
+      interfaces: novigrad:eth0!calanthe:eth1!foltest:eth1!
+    - Switch2
+      interfaces: foltest:eth0!anais:eth0!adda:eth0!
+ 
+  consoles :
+    - all
