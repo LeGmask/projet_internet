@@ -10,7 +10,7 @@ ip addr add 45.6.77.193/28 dev eth2
 
 echo 1 > /proc/sys/net/ipv4/ip_forward
 
-ip route add 45.6.77.0/25 via 45.6.77.145/28 # vert gauche
-ip route add 45.6.77.128/28 via 45.6.77.145/28 # rouge gauche
-ip route add 45.6.77.160/28 via 45.6.77.177/28 # noir down
-ip route add 45.6.77.208/28 via 45.6.77.177/28 # vert down
+ip route add 45.6.77.0/25 via 45.6.77.145 # vert gauche
+ip route add 45.6.77.128/28 via 45.6.77.145 # rouge gauche
+ip route add 45.6.77.160/28 via 45.6.77.177 # noir down
+ip route add 45.6.77.208/28 via 45.6.77.177 # vert down
