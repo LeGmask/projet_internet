@@ -6,48 +6,57 @@ network:
       mode : docker
       image : quagga_n7:latest
       files : ./files/yennefer/etc:/
- 
+      init: init
+
     - geralt
       mode : docker
       image : quagga_n7:latest
       files : ./files/geralt/etc:/
+      init: init
  
     - eskel
       mode : docker
       image : apache_n7:latest
       files : ./files/eskel/var:/
+      init: init
  
     - vesemir
       mode : docker
       image : dns_n7:latest
       files : ./files/vesemir/etc:/
+      init: init
  
     - cintra
       mode : docker
       image : quagga_n7:latest
       files : ./files/cintra/etc:/
+      init: init
  
     - vengerberg
       mode : docker
       image : quagga_n7:latest
       files : ./files/vengerberg/etc:/
+      init: init
  
  
     - novigrad
       mode : docker
       image : quagga_n7:latest
       files : ./files/novigrad/etc:/
+      init: init
  
  
     - calanthe
       mode : docker
       image : dhcp_n7:latest
       files : ./files/calanthe/etc:/
- 
+      init: init
+
     - foltest
       mode : docker
       image : dhcp_n7:latest
       files : ./files/foltest/etc:/
+      init: init
  
  
     - anais
@@ -58,6 +67,7 @@ network:
       mode : docker
       image : apache_n7:latest
       files : ./files/adda/var:/
+      init: init
  
     - cirilla
       mode : netns

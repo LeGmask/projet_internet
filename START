@@ -17,6 +17,7 @@ if [ "$C" != "0" ] ; then
   exit
 
 else
+  sudo -u evann xhost +SI:localuser:root
   #On copie les scripts dans le dossier partagé du Docker correspondant
   cp ./scripts/yennefer ./files/yennefer/etc/scripts/init
   cp ./scripts/geralt ./files/geralt/etc/scripts/init

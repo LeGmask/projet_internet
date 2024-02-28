@@ -10,7 +10,9 @@ yaneOpenConsoleWindow_xterm () {
 
    logMessage LOG "Running console '$c' in terminal '$t'"
 
-   $t -title ${SESSION_ID}_$1 -e $c &
+  #  echo /sbin/blackbox -c "$c"
+   echo "kitty $c &"
+   kitty $c &
 
    echo $! >> ./.yane_${SESSION_ID}_module_consoles.pid
 }

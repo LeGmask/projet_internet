@@ -2,6 +2,6 @@
 
 ip link set dev eth0 up
 
-ip addr add 45.6.77.194/25 dev eth0
+ip addr add 45.6.77.194/28 dev eth0
 
 ip route add default via 45.6.77.193

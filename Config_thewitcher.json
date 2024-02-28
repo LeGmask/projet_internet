@@ -1,1 +1,156 @@
-{"Name":"thewitcher","Hosts":[{"Name":"yennefer","Type":"Routeur","Interfaces":"3"},{"Name":"geralt","Type":"Routeur","Interfaces":"3"},{"Name":"eskel","Type":"WEB","Interfaces":"1"},{"Name":"vesemir","Type":"DNS","Interfaces":"1"},{"Name":"cintra","Type":"Routeur","Interfaces":"2"},{"Name":"vengerberg","Type":"Routeur","Interfaces":"2"},{"Name":"Switch1","Type":"Switch","Interfaces":"16"},{"Name":"novigrad","Type":"Routeur","Interfaces":"2"},{"Name":"Switch2","Type":"Switch","Interfaces":"16"},{"Name":"calanthe","Type":"DHCP","Interfaces":"2"},{"Name":"foltest","Type":"DHCP","Interfaces":"2"},{"Name":"Switch3","Type":"Switch","Interfaces":"16"},{"Name":"anais","Type":"Client","Interfaces":"1"},{"Name":"adda","Type":"WEB","Interfaces":"1"},{"Name":"cirilla","Type":"Client","Interfaces":"1"}],"Links":[{"H1":"geralt","I1":"eth1","H2":"yennefer","I2":"eth1"},{"H1":"eskel","I1":"eth0","H2":"yennefer","I2":"eth2"},{"H1":"vesemir","I1":"eth0","H2":"geralt","I2":"eth2"},{"H1":"cintra","I1":"eth1","H2":"geralt","I2":"eth0"},{"H1":"vengerberg","I1":"eth1","H2":"yennefer","I2":"eth0"},{"H1":"cirilla","I1":"eth0","H2":"calanthe","I2":"eth0"}],"Bridges":[{"Hosts":["vengerberg","cintra","novigrad"],"Interfaces":["eth0","eth0","eth1"]},{"Hosts":["novigrad","calanthe","foltest"],"Interfaces":["eth0","eth1","eth1"]},{"Hosts":["foltest","anais","adda"],"Interfaces":["eth0","eth0","eth0"]}]}
+{
+    "Name": "thewitcher",
+    "Hosts": [
+        {
+            "Name": "yennefer",
+            "Type": "Routeur",
+            "Interfaces": "3"
+        },
+        {
+            "Name": "geralt",
+            "Type": "Routeur",
+            "Interfaces": "3"
+        },
+        {
+            "Name": "eskel",
+            "Type": "WEB",
+            "Interfaces": "1"
+        },
+        {
+            "Name": "vesemir",
+            "Type": "DNS",
+            "Interfaces": "1"
+        },
+        {
+            "Name": "cintra",
+            "Type": "Routeur",
+            "Interfaces": "2"
+        },
+        {
+            "Name": "vengerberg",
+            "Type": "Routeur",
+            "Interfaces": "2"
+        },
+        {
+            "Name": "Switch1",
+            "Type": "Switch",
+            "Interfaces": "16"
+        },
+        {
+            "Name": "novigrad",
+            "Type": "Routeur",
+            "Interfaces": "2"
+        },
+        {
+            "Name": "Switch2",
+            "Type": "Switch",
+            "Interfaces": "16"
+        },
+        {
+            "Name": "calanthe",
+            "Type": "DHCP",
+            "Interfaces": "2"
+        },
+        {
+            "Name": "foltest",
+            "Type": "DHCP",
+            "Interfaces": "2"
+        },
+        {
+            "Name": "Switch3",
+            "Type": "Switch",
+            "Interfaces": "16"
+        },
+        {
+            "Name": "anais",
+            "Type": "Client",
+            "Interfaces": "1"
+        },
+        {
+            "Name": "adda",
+            "Type": "WEB",
+            "Interfaces": "1"
+        },
+        {
+            "Name": "cirilla",
+            "Type": "Client",
+            "Interfaces": "1"
+        }
+    ],
+    "Links": [
+        {
+            "H1": "geralt",
+            "I1": "eth1",
+            "H2": "yennefer",
+            "I2": "eth1"
+        },
+        {
+            "H1": "eskel",
+            "I1": "eth0",
+            "H2": "yennefer",
+            "I2": "eth2"
+        },
+        {
+            "H1": "vesemir",
+            "I1": "eth0",
+            "H2": "geralt",
+            "I2": "eth2"
+        },
+        {
+            "H1": "cintra",
+            "I1": "eth1",
+            "H2": "geralt",
+            "I2": "eth0"
+        },
+        {
+            "H1": "vengerberg",
+            "I1": "eth1",
+            "H2": "yennefer",
+            "I2": "eth0"
+        },
+        {
+            "H1": "cirilla",
+            "I1": "eth0",
+            "H2": "calanthe",
+            "I2": "eth0"
+        }
+    ],
+    "Bridges": [
+        {
+            "Hosts": [
+                "vengerberg",
+                "cintra",
+                "novigrad"
+            ],
+            "Interfaces": [
+                "eth0",
+                "eth0",
+                "eth1"
+            ]
+        },
+        {
+            "Hosts": [
+                "novigrad",
+                "calanthe",
+                "foltest"
+            ],
+            "Interfaces": [
+                "eth0",
+                "eth1",
+                "eth1"
+            ]
+        },
+        {
+            "Hosts": [
+                "foltest",
+                "anais",
+                "adda"
+            ],
+            "Interfaces": [
+                "eth0",
+                "eth0",
+                "eth0"
+            ]
+        }
+    ]
+}

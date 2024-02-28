@@ -14,6 +14,7 @@ yaneOpenConsoleWindow_tmux () {
    t=${SESSION_ID}_${console_session_tmux[$1]}
 
    logMessage LOG "Running console '$c' in terminal '$t' "
+   echo "Running console '$c' in terminal '$t' "
    $TMUX has -t $SESSION_ID$t 2> /dev/null
    if [ $? -eq 1 ]; then  # Si cette session tmux est nouvelle
      idpane[$t]=0

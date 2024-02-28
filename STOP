@@ -42,4 +42,6 @@ else
     sudo docker stop `sudo docker ps -a -q` > /dev/null
     sudo docker rm `sudo docker ps -a -q` > /dev/null
   fi
+
+  sudo -u evann xhost -
 fi
