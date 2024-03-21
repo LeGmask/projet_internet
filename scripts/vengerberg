@@ -8,8 +8,10 @@ ip addr add 45.6.77.145/28 dev eth1
 
 echo 1 > /proc/sys/net/ipv4/ip_forward
 
-ip route add 45.6.77.0/25 via 45.6.77.129 # vert gauche
-ip route add 45.6.77.176/28 via 45.6.77.146 # rouge gauche
-ip route add 45.6.77.160/28 via 45.6.77.146 # noir down
-ip route add 45.6.77.192/28 via 45.6.77.146 # vert up
-ip route add 45.6.77.208/28 via 45.6.77.146 # vert down
+service quagga start
+
+# ip route add 45.6.77.0/25 via 45.6.77.129 # vert gauche
+# ip route add 45.6.77.176/28 via 45.6.77.146 # rouge gauche
+# ip route add 45.6.77.160/28 via 45.6.77.146 # noir down
+# ip route add 45.6.77.192/28 via 45.6.77.146 # vert up
+# ip route add 45.6.77.208/28 via 45.6.77.146 # vert down
