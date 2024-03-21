@@ -8,3 +8,6 @@ ip addr add 45.6.77.3/25 dev eth1
 echo 1 > /proc/sys/net/ipv4/ip_forward
 
 ip route add default via 45.6.77.1
+
+# NAT
+iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
