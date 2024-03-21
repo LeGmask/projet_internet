@@ -5,3 +5,5 @@ ip link set dev eth0 up
 ip addr add 45.6.77.194/28 dev eth0
 
 ip route add default via 45.6.77.193
+
+/etc/init.d/apache2 start
