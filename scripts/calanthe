@@ -11,3 +11,7 @@ ip route add default via 45.6.77.1
 
 # NAT
 iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
+
+# DHCP
+touch /var/lib/dhcp/dhcpd.leases
+dhcpd eth0
