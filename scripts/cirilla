@@ -2,4 +2,4 @@
 
 ip link set dev eth0 up
 
-# dhclient eth0
+dhclient -nw eth0

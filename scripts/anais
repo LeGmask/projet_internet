@@ -2,4 +2,4 @@
 
 ip link set dev eth0 up
 
-# dhclient eth0 # le dhcp n'est pas démarer ... ducoup on wait a l'infini a faire manuellement
+dhclient -nw eth0 
