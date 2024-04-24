@@ -9,4 +9,4 @@ ip route add default via 45.6.77.193
 /etc/init.d/apache2 start
 
 # DNS
-echo 45.6.77.210 > /etc/resolv.conf
+echo "nameserver 45.6.77.210" > /etc/resolv.conf

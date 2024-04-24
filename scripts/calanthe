@@ -23,4 +23,4 @@ touch /var/lib/dhcp/dhcpd.leases
 dhcpd eth0
 
 # DNS
-echo 45.6.77.210 > /etc/resolv.conf
+echo "nameserver 45.6.77.210" > /etc/resolv.conf

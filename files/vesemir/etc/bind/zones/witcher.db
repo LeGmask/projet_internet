@@ -22,9 +22,9 @@ dns        A       11.0.0.2                     ;Adresse IP du
 dns        HINFO   "PII 233 :-)" "Debian Testing"  ;Info complèmentaire
 
 ;** Les lignes suivantes définissent la table entre les noms et les IP
+www         A       45.6.77.194
 eskel       A       45.6.77.194
 
-www         A       45.6.77.210
 vesimir     A       45.6.77.210
 
 yenefer     A       45.6.77.193

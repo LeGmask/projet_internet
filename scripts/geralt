@@ -18,4 +18,4 @@ service quagga start
 # ip route add 45.6.77.192/28 via 45.6.77.178 # vert up
 
 # DNS
-echo 45.6.77.210 > /etc/resolv.conf
+echo "nameserver 45.6.77.210" > /etc/resolv.conf
