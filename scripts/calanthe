@@ -12,6 +12,15 @@ ip route add default via 45.6.77.1
 # NAT
 iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
 
+# Nat Seccurity
+iptables -A FORWARD -i eht0 -o eth1 -j REJECT
+iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+iptables -A INPUT -m state --state NEW -i ! eth0 -j ACCEPT
+iptables -P INPUT DROP
+
 # DHCP
 touch /var/lib/dhcp/dhcpd.leases
 dhcpd eth0
+
+# DNS
+echo 45.6.77.210 > /etc/resolv.conf

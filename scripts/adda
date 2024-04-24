@@ -2,10 +2,14 @@
 
 ip link set dev eth0 up
 
+# IP static since it's a web server
 ip addr add 192.168.146.2/25 dev eth0
 
 ip route add default via 192.168.146.1
 
 /etc/init.d/apache2 start
 
-dhclient -nw eth0
+# dhclient -nw eth0
+
+# DNS
+echo 45.6.77.210 > /etc/resolv.conf

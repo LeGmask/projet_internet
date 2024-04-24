@@ -7,3 +7,6 @@ ip addr add 45.6.77.210/25 dev eth0
 ip route add default via 45.6.77.209
 
 /etc/init.d/bind9 start
+
+# DNS
+echo 45.6.77.210 > /etc/resolv.conf

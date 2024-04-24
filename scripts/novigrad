@@ -16,3 +16,6 @@ service quagga start
 
 # ip route add 45.6.77.160/28 via 45.6.77.131 # noir down
 # ip route add 45.6.77.208/28 via 45.6.77.131 # vert down
+
+# DNS
+echo 45.6.77.210 > /etc/resolv.conf
