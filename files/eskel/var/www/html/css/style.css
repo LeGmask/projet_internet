@@ -440,11 +440,11 @@ body:before {
   height: 100vh;
   content: '';
   width: 100vw;
-  background-image: url("../profile.jpg");
-  background-size: cover;
+  background-image: url("../eskel.webp");
+  /* background-size: cover; */
   background-position: bottom right;
   background-repeat: repeat;
-  background-size: cover;
+  background-size: contain;
   background-attachment: scroll; }
 
 body.left:before {

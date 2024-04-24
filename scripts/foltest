@@ -17,6 +17,8 @@ iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
 iptables -A FORWARD -i eht0 -o eth1 -j REJECT
 iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 iptables -A INPUT -m state --state NEW -i ! eth0 -j ACCEPT
+iptables -A INPUT -p tcp --dport 80 -j ACCEPT # http
+iptables -A INPUT -p tcp --dport 443 -j ACCEPT # http
 iptables -P INPUT DROP
 
 # Port forwarding - HTTP and HTTPS to the web server
